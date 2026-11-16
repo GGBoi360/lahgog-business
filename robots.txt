@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lahgog.com/sitemap.xml

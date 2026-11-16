@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>בקשה להצטרפות | לחגוג לעסקים</title>
+    <meta name="description" content="בקשה להצטרף לרשימת הספקים של לחגוג: הפעלות וסדנאות לימי הולדת. בחינם ובלי התחייבות." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#24152F" />
+    <link rel="canonical" href="https://lahgog.com/apply" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="preload" href="/fonts/rubik-800.woff" as="font" type="font/woff" crossorigin />
+    <link rel="stylesheet" href="/landing.css" />
+    <link rel="stylesheet" href="/biz.css" />
+  </head>
+  <body>
+    <!-- The application (research/vendor-site.md §5.3, trimmed for stage A). No server: the form composes an email to
+         business@lahgog.com in the visitor's mail app, with a copy-and-send fallback. Nothing is stored by the site. -->
+    <a class="skip" href="#main">דילוג לתוכן</a>
+    <div class="stage">
+      <header class="wrap top">
+        <a class="mark" href="/"><img src="/icon.svg" alt="" width="40" height="40" />לחגוג <span class="biz-tag">לעסקים</span></a>
+      </header>
+      <section class="wrap biz-form-wrap" id="main">
+        <h1>בקשה להצטרפות.</h1>
+        <p class="lead">בחינם ובלי התחייבות. נקרא כל בקשה בעצמנו ונחזור אליכם.</p>
+
+        <form class="calc-card biz-form" id="apply" novalidate>
+          <fieldset>
+            <legend>מי אתם</legend>
+            <label for="kind">סוג הפנייה</label>
+            <select class="text-in" id="kind" required>
+              <option value="">בחירה</option>
+              <option>נותני שירות לאירועים</option>
+              <option>מארגני אירועים</option>
+              <option>אחר</option>
+            </select>
+            <label for="category">התחום</label>
+            <select class="text-in" id="category" required>
+              <option value="">בחירה</option>
+              <option>הפעלות לימי הולדת</option>
+              <option>סדנאות</option>
+              <option>אחר</option>
+            </select>
+            <label for="business">שם העסק, כפי שהוא רשום</label>
+            <input class="text-in" id="business" type="text" maxlength="80" required />
+            <label for="publicName">השם שהלקוחות מכירים (אם שונה)</label>
+            <input class="text-in" id="publicName" type="text" maxlength="80" />
+            <label for="link">אתר או אינסטגרם</label>
+            <input class="text-in" id="link" type="text" maxlength="200" inputmode="url" placeholder="instagram.com/..." required />
+            <label for="areas">אזורי שירות</label>
+            <input class="text-in" id="areas" type="text" maxlength="120" placeholder="למשל: מרכז, השרון" />
+            <label for="about">כמה מילים על מה שאתם עושים</label>
+            <textarea class="text-in" id="about" rows="3" maxlength="300"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>איך נחזור אליכם</legend>
+            <label for="contact">שם איש הקשר</label>
+            <input class="text-in" id="contact" type="text" maxlength="60" autocomplete="name" required />
+            <label for="phone">טלפון נייד</label>
+            <input class="text-in" id="phone" type="tel" maxlength="20" autocomplete="tel" required />
+            <label for="email">אימייל</label>
+            <input class="text-in" id="email" type="email" maxlength="120" autocomplete="email" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>לאימות (לא חובה עכשיו)</legend>
+            <label for="entity">סוג העסק</label>
+            <select class="text-in" id="entity">
+              <option value="">בחירה</option>
+              <option>עוסק פטור</option>
+              <option>עוסק מורשה</option>
+              <option>חברה בע״מ</option>
+              <option>שותפות</option>
+              <option>עמותה</option>
+              <option>עוד לא רשום</option>
+            </select>
+            <label for="number">מספר עוסק / ח.פ.</label>
+            <input class="text-in" id="number" type="text" inputmode="numeric" maxlength="12" />
+            <p class="small-note">צריך אותו רק לסימן "עסק מאומת". <a href="/verification">מה בודקים</a></p>
+          </fieldset>
+
+          <p class="notice">הפרטים יישלחו אלינו באימייל שנפתח אצלכם, ונשתמש בהם רק כדי לבדוק את הבקשה ולחזור אליכם. מסירתם רשות. בקשה שלא התקבלה נמחקת אחרי 12 חודשים, ואפשר לבקש למחוק אותה קודם. <a href="/privacy">מדיניות הפרטיות</a></p>
+          <label class="check"><input id="agree" type="checkbox" /> מאשרים שתחזרו אלינו בנוגע לבקשה</label>
+          <button class="go-btn" type="submit">לשלוח את הבקשה</button>
+          <p class="calc-error" id="error" role="alert" hidden></p>
+        </form>
+
+        <div class="calc-card biz-form" id="done" hidden>
+          <h2>כמעט שם.</h2>
+          <p>נפתח אימייל מוכן אל <b>business@lahgog.com</b>. שלחו אותו ומשם נמשיך. אם הוא לא נפתח, העתיקו את הנוסח ושלחו אותו מכל תיבת דואר:</p>
+          <textarea class="text-in out" id="mailText" rows="10" readonly></textarea>
+          <button class="ghost-btn" id="copy" type="button">העתקה</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="wrap foot">
+      <nav aria-label="קישורים">
+        <a href="/">לחגוג לעסקים</a>
+        <a href="/verification">אימות עסקים</a>
+        <a href="/privacy">פרטיות</a>
+        <a href="mailto:business@lahgog.com">business@lahgog.com</a>
+      </nav>
+      <p>לחגוג</p>
+    </footer>
+    <script src="/apply.js"></script>
+  </body>
+</html>

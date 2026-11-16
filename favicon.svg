@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 312 312" width="512" height="512"><!-- The app icon (R116, candle-ל), built from assets/brand/icon-2026 background + foreground, cropped like play-512.png. --><defs><linearGradient id="F1bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4A78"/><stop offset="1" stop-color="#FF7A59"/></linearGradient></defs>
+    <rect width="432" height="432" fill="url(#F1bg)"/><defs><linearGradient id="F1rib" gradientUnits="userSpaceOnUse" x1="0" y1="200" x2="0" y2="340"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFF1E6"/></linearGradient>
+      <clipPath id="F1cc"><path d="M150 155 Q150 146 159 146 L181 146 Q190 146 190 155 L190 203 L150 203 Z"/></clipPath>
+    </defs>
+    <g transform="translate(-10 0)">
+    <!-- ribbon: from the candle's foot, across, then the curling descender -->
+    <path d="M170 200 L170 204 Q170 222 190 222 L258 222 C 290 222 302 246 294 274 C 286 300 262 316 226 322" fill="none" stroke="url(#F1rib)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- candle (the ascender), same width as the ribbon so they read as one stroke -->
+    <g clip-path="url(#F1cc)">
+      <rect x="150" y="146" width="40" height="58" fill="#FFFFFF"/>
+      <path d="M140 170 L200 146 L200 158 L140 182 Z M140 196 L200 172 L200 184 L140 208 Z" fill="#FF4A78"/>
+    </g>
+    <!-- wick + flame -->
+    <path d="M170 146 L170 138" stroke="#6B4A3A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M171 96 C 177 110 190 117 190 127 C 190 135 181 140 170 140 C 159 140 150 135 150 127 C 150 117 165 110 171 96 Z" fill="#FFCB45"/>
+    <path d="M170 112 C 174 118 179 121 179 127 C 179 132 175 135 170 135 C 165 135 161 132 161 127 C 161 121 166 118 170 112 Z" fill="#FFF3CF"/>
+    </g><circle cx="306" cy="150" r="10" fill="#FFCB45"/><rect x="112" y="268" width="22" height="11" rx="5" fill="#FFFFFF" opacity="0.9" transform="rotate(30 123 273)"/></svg>
