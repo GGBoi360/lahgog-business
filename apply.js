@@ -1,10 +1,10 @@
-// The application form: checks the required fields, then opens an email to business@lahgog.com in the visitor's
+// The application form: checks the required fields, then opens an email to business@lahgog.app in the visitor's
 // mail app with the answers in the body (and shows the same text to copy if no mail app opens). Nothing is sent to a
 // server by this page.
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var TO = 'business@lahgog.com';
+  var TO = 'business@lahgog.app';
   var FIELDS = [
     ['kind', 'סוג הפנייה', true], ['category', 'התחום', true], ['business', 'שם העסק', true], ['publicName', 'שם מוכר', false],
     ['link', 'אתר / אינסטגרם', true], ['areas', 'אזורי שירות', false], ['about', 'על העסק', false],

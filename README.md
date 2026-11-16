@@ -10,8 +10,8 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
 - **Owner's decisions it follows (2026-11-12):** first categories kids' birthday entertainers and workshops; the mark is
   free and means only that the business exists and the applicant represents it; no payment system, so nothing here
   sells anything. Never: fake counters, logos of businesses that didn't agree, dates promised for "later" items.
-- **The application has no server.** `apply.js` checks the fields and opens an email to `business@lahgog.com` with the
-  answers, and shows the same text to copy. So `business@lahgog.com` must forward (Porkbun) to the owner's mailbox,
+- **The application has no server.** `apply.js` checks the fields and opens an email to `business@lahgog.app` with the
+  answers, and shows the same text to copy. So `business@lahgog.app` must forward (Porkbun) to the owner's mailbox,
   and the privacy page names Porkbun and Google for that reason. If a server form ever replaces it, that's a new data
   flow: update `privacy.html` first.
 - **Shared look:** `landing.css`, `fonts/` and the icons are copies from `../site/`; `biz.css` adds this site's parts.
