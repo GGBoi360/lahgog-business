@@ -32,9 +32,11 @@
     var body = lines.join('\n');
     var subject = 'בקשה להצטרפות: ' + value('business');
     $('mailText').value = 'אל: ' + TO + '\nנושא: ' + subject + '\n\n' + body;
+    var mailto = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    $('reopen').href = mailto;
     $('apply').hidden = true;
     $('done').hidden = false;
-    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
   });
   $('copy').addEventListener('click', function () {
     if (!navigator.clipboard) return;
