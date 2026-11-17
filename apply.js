@@ -1,5 +1,5 @@
 // The application form: checks the required fields, then sends them to our server (submit_business_application,
-// migration 95: a closed table the owner reads; at most one notification an hour, a count). If the server can't be
+// migration 95; the contact role since 98: a closed table the owner reads; at most one notification an hour, a count). If the server can't be
 // reached, the same answers can go by email to business@lahgog.app instead (the visitor sends it; nothing else
 // is sent). The anon key below is the app's public key (role "anon"): access is decided by that function, not the key.
 (function () {
@@ -11,7 +11,7 @@
   var FIELDS = [
     ['kind', 'סוג הפנייה', true], ['category', 'התחום', true], ['business', 'שם העסק', true], ['publicName', 'שם מוכר', false],
     ['link', 'אתר / אינסטגרם', true], ['areas', 'אזורי שירות', false], ['about', 'על העסק', false],
-    ['contact', 'איש קשר', true], ['phone', 'טלפון', true], ['email', 'אימייל', true],
+    ['contact', 'איש קשר', true], ['role', 'תפקיד בעסק', true], ['phone', 'טלפון', true], ['email', 'אימייל', true],
     ['entity', 'סוג העסק', false], ['number', 'מספר עוסק / ח.פ.', false],
   ];
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
