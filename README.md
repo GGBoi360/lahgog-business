@@ -18,6 +18,10 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
   reached (or the migration isn't live yet), the page offers a ready email to `business@lahgog.app` with a copy
   fallback, so that address must keep forwarding (Porkbun) to the owner's mailbox; the privacy page names Supabase,
   Porkbun and Google for that reason. Retention (12 months, monthly purge) is in the migration and `privacy.html`.
+- **Email copy (migration 096):** each new row wakes the `email-business-application` Edge Function, which emails it
+  in full to `business@lahgog.app` through Resend (from `noreply@lahgog.app`, reply goes to the applicant). Needs the
+  Edge Function secret `RESEND_API_KEY` and the domain lahgog.app verified in Resend (DNS at Porkbun: DKIM TXT
+  `resend._domainkey`, CNAMEs `send` and `rsend`, DMARC). A failed send is written to the row's `email_error`.
 - **Handling an application (owner):** dashboard → Table editor → `business_applications`; set `status` as it moves
   (`contacted`, `verifying`, `accepted`, `rejected`, `withdrawn`). An accepted business that leaves the list gets
   `left_at`, which starts its 12 months. A request to delete is a plain row delete.
