@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>לחגוג לעסקים: הפעלות וסדנאות לימי הולדת</title>
-    <meta name="description" content="לחגוג היא אפליקציה לתכנון ימי הולדת ואירועים. מפעילים ומנחי סדנאות לימי הולדת מוזמנים להצטרף לרשימת הספקים הראשונה, בחינם." />
+    <title>לחגוג לעסקים: ספקים לימי הולדת ואירועים</title>
+    <meta name="description" content="לחגוג היא אפליקציה לימי הולדת ואירועים: היא זוכרת, מזכירה ועוזרת לתכנן. ספקים לאירועים מוזמנים להצטרף כשותפים מייסדים לרשימת הספקים שלה, בחינם ובלי התחייבות." />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#24152F" />
     <link rel="canonical" href="https://lahgog.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="לחגוג לעסקים" />
     <meta property="og:title" content="לחגוג לעסקים" />
-    <meta property="og:description" content="מפעילים ומנחי סדנאות לימי הולדת: מצטרפים לרשימת הספקים הראשונה של לחגוג, בחינם." />
+    <meta property="og:description" content="ספקים לימי הולדת ולאירועים: מצטרפים כשותפים מייסדים לרשימת הספקים של לחגוג, בחינם ובלי התחייבות." />
     <meta property="og:url" content="https://lahgog.com/" />
     <meta property="og:locale" content="he_IL" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -20,60 +20,138 @@
     <link rel="preload" href="/fonts/rubik-800.woff" as="font" type="font/woff" crossorigin />
     <link rel="stylesheet" href="/landing.css" />
     <link rel="stylesheet" href="/biz.css" />
+    <link rel="stylesheet" href="/chrome.css" />
   </head>
   <body>
-    <!-- lahgog.com, "לחגוג לעסקים" (R87 stage A, docs/website/DECISIONS.md and research/vendor-site.md §5.3). Source of
-         truth: yomuledet/site-biz/, mirrored to GGBoi360/lahgog-business. Rules: no fake counters or logos, nothing
-         promised by date, "today" and "later" kept apart, no money (owner 2026-11-12: no payment system). -->
+    <!-- lahgog.com, "לחגוג לעסקים" (R87; round 2 on 2026-11-17: events in general, a vendor's pitch, founding-partner
+         terms, FAQ). Source of truth: yomuledet/site-biz/, mirrored to GGBoi360/lahgog-business. Rules
+         (docs/website/DECISIONS.md, research/vendor-site.md and vendor-deal.md): no fake counters, numbers or logos;
+         what exists today and what comes later are kept apart, and nothing later has a date; the screenshot is the
+         real app. -->
     <a class="skip" href="#main">דילוג לתוכן</a>
     <div class="stage">
-      <header class="wrap top">
-        <a class="mark" href="/"><img src="/icon.svg" alt="" width="40" height="40" />לחגוג <span class="biz-tag">לעסקים</span></a>
-        <a class="lang" href="https://lahgog.app/">לאפליקציה</a>
-      </header>
+      <!-- chrome:bar -->
+      <header class="sitebar biz-bar">
+        <a class="sb-mark" href="/"><img src="/icon.svg" alt="" width="40" height="40" />לחגוג <span class="biz-tag">לעסקים</span></a>
+        <nav class="sb-links" aria-label="ניווט"><a href="/#how">איך זה עובד</a><a href="/#terms">התנאים</a><a href="/#faq">שאלות</a><a href="/verification">אימות עסקים</a><a class="sb-biz" href="https://lahgog.app/">האפליקציה</a></nav>
+        <a class="sb-cta" href="/apply">הצטרפות</a>
+        </header>
+      <!-- /chrome:bar -->
+
       <section class="wrap hero biz-hero" id="main">
         <div>
-          <h1>הורים מתכננים ימי הולדת. בואו להיות שם.</h1>
-          <p class="lead"><a href="https://lahgog.app/">לחגוג</a> היא אפליקציה שזוכרת ימי הולדת ועוזרת לתכנן אותם: רשימת אורחים, משימות, תקציב וספקים. אנחנו בונים את רשימת הספקים הראשונה שלה, ומתחילים בשני תחומים.</p>
-          <a class="go-link" href="/apply">בקשה להצטרפות, בחינם</a>
+          <h1>הלקוחות הבאים שלכם כבר מתכננים.</h1>
+          <p class="lead"><a href="https://lahgog.app/">לחגוג</a> היא אפליקציה לימי הולדת ולאירועים: היא זוכרת כל תאריך, מזכירה בזמן, ועוזרת לתכנן כל שמחה, מהאורחים ועד הספקים. אנחנו בונים בה רשימת ספקים, ומזמינים עסקים להצטרף ראשונים.</p>
+          <div class="cta-row">
+            <a class="go-link" href="/apply">הצטרפות כשותפים מייסדים</a>
+            <a class="ghost-link" href="#how">איך זה עובד</a>
+          </div>
+          <p class="hero-terms">בחינם · בלי התחייבות · בלי עמלות</p>
         </div>
-        <ul class="cats" aria-label="התחומים הראשונים">
-          <li><b>🎩 הפעלות לימי הולדת</b><span>קוסמים, מפעילים, דמויות, הפעלות לגיל הרך ולגיל בית הספר.</span></li>
-          <li><b>🎨 סדנאות</b><span>אפייה, יצירה, מדע ועוד: סדנה שהיא החגיגה עצמה.</span></li>
-        </ul>
+        <figure class="biz-shot">
+          <div class="shot"><img src="/shots/plan-card.webp" alt="מסך תכנון אמיתי מהאפליקציה: יום הולדת בגינה, עשר משימות, ביניהן להזמין הפעלה או בעל מקצוע לילדים." width="600" height="1122" /></div>
+          <span class="spot" aria-hidden="true"></span>
+          <figcaption>מסך אמיתי מהאפליקציה. <b>כאן, ליד המשימה "להזמין הפעלה", תופיע רשימת הספקים.</b></figcaption>
+        </figure>
       </section>
     </div>
 
     <main>
-      <section class="band" aria-labelledby="now-title">
-        <div class="wrap two-cols">
-          <div>
-            <h2 id="now-title">מה יש היום.</h2>
-            <ul class="points">
-              <li><strong>בקשה להצטרפות</strong><span>ממלאים פרטים, ואנחנו חוזרים אליכם בעצמנו. בלי עלות ובלי התחייבות.</span></li>
-              <li><strong>שותפים מייסדים</strong><span>העסקים הראשונים שיתקבלו יופיעו ברשימה בחינם, כשהיא תיפתח.</span></li>
-              <li><strong>סימן "עסק מאומת", בחינם</strong><span>בודקים שהעסק קיים ושמי שפנה אלינו מייצג אותו. <a href="/verification">מה בודקים</a></span></li>
-            </ul>
-          </div>
-          <div>
-            <h2>מה יבוא בהמשך.</h2>
-            <ul class="points later">
-              <li><strong>רשימת ספקים באפליקציה</strong><span>במקום שבו מתכננים: ליד המשימה "להזמין הפעלה".</span></li>
-              <li><strong>תחומים נוספים</strong><span>מקומות לאירועים, ואחר כך קייטרינג.</span></li>
-              <li><strong>מארגנים מאומתים</strong><span>עמוד אירוע ציבורי ואישורי הגעה, למי שמארגן אירועים לקהל.</span></li>
-            </ul>
-            <p class="small-note">בלי תאריכים מובטחים: נפתח כל שלב כשיהיו מספיק משתמשים שבשבילם זה שווה לכם.</p>
+      <section class="band" aria-labelledby="who-title">
+        <div class="wrap">
+          <h2 id="who-title">למי זה מתאים.</h2>
+          <p class="intro">לכל עסק שעושה ימי הולדת ואירועים שמחים. הרשימה נפתחת קודם להפעלות ולסדנאות, ואחריהן לשאר התחומים. אפשר להגיש בקשה בכל תחום כבר עכשיו.</p>
+          <ul class="chips" aria-label="תחומים">
+            <li class="first">הפעלות ומופעים</li>
+            <li class="first">סדנאות</li>
+            <li>מקומות לאירועים</li>
+            <li>קייטרינג ואוכל</li>
+            <li>עוגות וקינוחים</li>
+            <li>צילום ווידאו</li>
+            <li>עיצוב ובלונים</li>
+            <li>DJ ומוזיקה</li>
+            <li>הפקה וארגון</li>
+          </ul>
+          <p class="chips-key"><span class="dot"></span> נפתחים ראשונים</p>
+        </div>
+      </section>
+
+      <section class="band soft" aria-labelledby="why-title">
+        <div class="wrap">
+          <h2 id="why-title">פנייה מתוך תכנון, לא עוד מודעה.</h2>
+          <p class="intro">רוב הפורטלים מוכרים חשיפה. לחגוג נמצאת ברגע שבו מחליטים: כשהורה או מארגן כבר בונים את האירוע, עם תאריך, אורחים ותקציב. כך תעבוד רשימת הספקים:</p>
+          <div class="value-grid">
+            <article><h3>פנייה עם כל הפרטים</h3><p>מי שיפנה אליכם מתוך התכנון יוכל לצרף את התאריך, הגיל, מספר האורחים והאזור, כדי שתוכלו לענות כבר בהודעה הראשונה.</p></article>
+            <article><h3>פנייה אחת, לעסק אחד</h3><p>בלי טופס "קבלו 5 הצעות". הלקוח בוחר אתכם ופונה אליכם, ורק אליכם.</p></article>
+            <article><h3>ישר לוואטסאפ שלכם</h3><p>בלי תיבת הודעות של פלטפורמה ובלי מתווכים. השיחה, המחיר והסגירה נשארים אצלכם.</p></article>
+            <article class="today"><h3>כבר היום: יום האירוע מסודר</h3><p>מארגן האירוע שולח לספקים מהאפליקציה את לוח הזמנים של היום, עם שעת ההגעה של כל אחד.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="band soft" aria-labelledby="fair-title">
+      <section class="band" id="how" aria-labelledby="how-title">
+        <div class="wrap two-cols">
+          <div>
+            <h2 id="how-title">איך מצטרפים.</h2>
+            <ol class="how">
+              <li><strong>שולחים בקשה</strong><span>שתי דקות: מי אתם, מה אתם עושים ואיפה. בלי עלות.</span></li>
+              <li><strong>שיחה קצרה ואימות</strong><span>אנחנו קוראים כל בקשה בעצמנו, חוזרים אליכם, ובודקים שהעסק קיים ושאתם מייצגים אותו. <a href="/verification">מה בודקים</a></span></li>
+              <li><strong>מופיעים ברשימה</strong><span>כשרשימת הספקים נפתחת באפליקציה, העסקים שהתקבלו מופיעים בה ראשונים, עם סימן "עסק מאומת".</span></li>
+            </ol>
+          </div>
+          <div class="later-box" aria-labelledby="later-title">
+            <h3 id="later-title">מה תקבלו כעסק, בהמשך</h3>
+            <ul class="points">
+              <li><strong>עמוד עסק משלכם</strong><span>תמונות, תחום, אזורים, טווח מחירים וגילאים, וקישור לוואטסאפ.</span></li>
+              <li><strong>דוח חודשי</strong><span>כמה ראו את העסק, כמה פנו אליכם, וכמה סימנו אתכם כספק שהוזמן. מספרים אמיתיים בלבד.</span></li>
+              <li><strong>כניסה לעסקים</strong><span>לעדכן פרטים ולראות את המספרים בעצמכם.</span></li>
+            </ul>
+            <p class="small-note">בלי תאריכים מובטחים: כל שלב נפתח כשיש מספיק משתמשים שבשבילם זה שווה לכם.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band soft" id="terms" aria-labelledby="terms-title">
         <div class="wrap">
-          <h2 id="fair-title">הוגן לשני הצדדים.</h2>
-          <div class="facts">
-            <article><h3>היום זה בחינם</h3><p>אין דמי הצטרפות, אין מנוי ואין עמלות. אם זה ישתנה, נגיד מראש ובכתב, ולא נחייב אף אחד בלי הסכמה.</p></article>
-            <article><h3>שקוף למשתמשים</h3><p>אם אי פעם עסק ישלם כדי להופיע, זה ייאמר במפורש ליד הרשימה. תשלום לא יקנה מקום גבוה יותר בסתר.</p></article>
-            <article><h3>אנשים אמיתיים</h3><p>אין דירוגים מומצאים, ואין לוגואים של עסקים שלא הסכימו. כל עסק נבדק לפני שהוא מופיע.</p></article>
+          <h2 id="terms-title">תנאי השותפים המייסדים.</h2>
+          <ul class="terms-list">
+            <li><b>בחינם.</b> אין דמי הצטרפות, אין מנוי ואין עמלות, כל עוד לא הודענו אחרת.</li>
+            <li><b>בלי התחייבות.</b> אפשר לצאת מהרשימה בכל רגע, בהודעת וואטסאפ או אימייל.</li>
+            <li><b>שינוי רק מראש ובכתב.</b> אם יהיה מחיר, הוא יהיה תשלום חודשי קבוע, בלי עמלה על עסקאות. נודיע מראש, ולא נחייב אף אחד בלי הסכמה.</li>
+            <li><b>שקיפות למשתמשים.</b> כשעסקים ישלמו כדי להופיע, זה ייאמר בבירור ליד הרשימה. תשלום לא יקנה מקום גבוה יותר בסתר.</li>
+            <li><b>בלי חוות דעת מזויפות.</b> אין דירוגים מומצאים ואין לוגואים של עסקים שלא הסכימו.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band" id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <h2 id="faq-title">שאלות נפוצות.</h2>
+          <div class="faq">
+            <details>
+              <summary>כמה זה עולה?</summary>
+              <p>היום כלום. שותפים מייסדים מופיעים בחינם. אם בעתיד יהיה מחיר, הוא יהיה תשלום חודשי קבוע, ונודיע עליו מראש ובכתב. בלי עמלה על עסקאות.</p>
+            </details>
+            <details>
+              <summary>מתי רשימת הספקים נפתחת?</summary>
+              <p>אחרי שהאפליקציה תצא ויהיו בה מספיק משתמשים, קודם בהפעלות ובסדנאות. אנחנו לא נותנים תאריך, כדי לא להבטיח לכם קהל שעוד אין. נעדכן את מי שהתקבל.</p>
+            </details>
+            <details>
+              <summary>איך יגיעו אליי פניות?</summary>
+              <p>ישירות לוואטסאפ או לטלפון שלכם. הלקוח בוחר אתכם מהרשימה ופונה בעצמו. אנחנו לא שולחים את אותה פנייה לכמה עסקים.</p>
+            </details>
+            <details>
+              <summary>אני לא עושה ימי הולדת לילדים. זה בשבילי?</summary>
+              <p>כן. האפליקציה משמשת לימי הולדת בכל גיל ולאירועים שמחים בכלל. נפתח קודם בהפעלות ובסדנאות, ואחר כך בשאר התחומים. בקשה שתגישו עכשיו תישמר לתחום שלכם.</p>
+            </details>
+            <details>
+              <summary>מה זה "עסק מאומת"?</summary>
+              <p>סימן חינמי שאומר שבדקנו שהעסק קיים ושמי שפנה אלינו מייצג אותו. הוא לא דירוג ולא המלצה, ואי אפשר לקנות אותו. <a href="/verification">כל הפרטים</a></p>
+            </details>
+            <details>
+              <summary>מה אתם עושים עם הפרטים שלי?</summary>
+              <p>משתמשים בהם רק כדי לבדוק את הבקשה ולחזור אליכם. בקשה שלא התקבלה נמחקת אחרי 12 חודשים. <a href="/privacy">מדיניות הפרטיות</a></p>
+            </details>
           </div>
         </div>
       </section>
@@ -81,20 +159,20 @@
 
     <section class="closing" aria-labelledby="closing-title">
       <div class="wrap">
-        <h2 id="closing-title">מפעילים או מנחי סדנאות? נשמח להכיר.</h2>
-        <a class="go-link" href="/apply">בקשה להצטרפות</a>
+        <h2 id="closing-title">רוצים להיות בין הראשונים?</h2>
+        <a class="go-link" href="/apply">הצטרפות כשותפים מייסדים</a>
       </div>
     </section>
 
-    <footer class="wrap foot">
-      <nav aria-label="קישורים">
-        <a href="/apply">בקשה להצטרפות</a>
-        <a href="/verification">אימות עסקים</a>
-        <a href="/privacy">פרטיות</a>
-        <a href="https://lahgog.app/">לחגוג, האפליקציה</a>
-        <a href="mailto:business@lahgog.app">business@lahgog.app</a>
-      </nav>
-      <p>לחגוג</p>
-    </footer>
+    <!-- chrome:foot -->
+      <footer class="sitefoot" aria-label="קישורים">
+      <div class="sf-cols">
+      <div><h2>לחגוג לעסקים</h2><ul><li><a href="/" aria-current="page">דף הבית</a></li><li><a href="/apply">בקשה להצטרפות</a></li><li><a href="/verification">אימות עסקים</a></li><li><a href="/#faq">שאלות נפוצות</a></li></ul></div>
+      <div><h2>מידע</h2><ul><li><a href="/privacy">פרטיות</a></li><li><a href="mailto:business@lahgog.app">business@lahgog.app</a></li></ul></div>
+      <div><h2>לחגוג</h2><ul><li><a href="https://lahgog.app/">האפליקציה</a></li><li><a href="https://lahgog.app/hebrew-birthday">מחשבון יום הולדת עברי</a></li><li><a href="https://lahgog.app/collect">איסוף ימי הולדת</a></li></ul></div>
+      </div>
+      <p class="sf-base">לחגוג</p>
+      </footer>
+      <!-- /chrome:foot -->
   </body>
 </html>

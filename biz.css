@@ -19,6 +19,43 @@
 .facts p { margin: 0; color: var(--muted); }
 .closing .go-link { margin-top: 4px; }
 
+/* Home, round 2 (2026-11-17): the bar, the hero with the real planner screenshot, who it's for, why, terms. */
+.biz-bar .sb-cta { text-decoration: none; font-weight: 800; font-size: 15px; padding: 9px 18px; border-radius: 999px; background: var(--saffron); color: #2a1a00; }
+.biz-bar .sb-cta:focus-visible { outline: 3px solid #fff8f2; outline-offset: 2px; }
+@media (max-width: 760px) { .biz-bar > .sb-links { display: none; } }
+.plain-top.sitebar .biz-tag { background: var(--lavender); color: var(--violet); }
+.biz-hero h1 { max-width: 13ch; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.ghost-link { color: #fff8f2; font-weight: 500; text-underline-offset: 4px; }
+.hero-terms { margin: 16px 0 0; font-size: 15px; color: rgba(255, 248, 242, 0.72); }
+.biz-shot { margin: 0; position: relative; width: 280px; justify-self: center; }
+.biz-shot .shot { transform: rotate(-2deg); }
+/* The to-do "להזמין הפעלה או בעל מקצוע לילדים" in the screenshot: its row is at 43.5% of the 600×1122 image, which
+   is 264 px wide here (280 minus the 8 px frame), so its centre is 8 + 0.435 × 493.7 ≈ 223 px from the top. */
+.biz-shot .spot { position: absolute; inset-inline: -6px; top: 204px; height: 38px; border: 3px solid var(--saffron); border-radius: 12px; transform: rotate(-2deg); box-shadow: 0 0 12px rgba(245, 178, 27, 0.35); pointer-events: none; }
+.biz-shot figcaption { margin-top: 18px; font-size: 15px; color: rgba(255, 248, 242, 0.78); text-align: center; }
+.biz-shot figcaption b { display: block; color: #fff8f2; font-weight: 500; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 500; }
+.chips li.first { border-color: var(--coral); }
+.chips li.first::before, .chips-key .dot { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); margin-inline-end: 8px; vertical-align: middle; }
+.chips-key { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+.value-grid { display: grid; gap: 14px; }
+@media (min-width: 760px) { .value-grid { grid-template-columns: 1fr 1fr; } }
+.value-grid article { background: var(--surface); border-radius: 22px; padding: 22px; }
+.value-grid h3 { margin: 0 0 6px; font-size: 20px; font-weight: 800; }
+.value-grid p { margin: 0; color: var(--muted); }
+.value-grid article.today { border: 2px solid var(--teal); }
+.value-grid article.today h3 { color: var(--teal-ink); }
+.later-box { background: var(--surface); border: 1px solid var(--line); border-radius: 26px; padding: 24px; align-self: start; }
+.later-box h3 { margin: 0 0 16px; font-size: 20px; font-weight: 800; }
+.later-box .points { margin-bottom: 8px; }
+.later-box .points li { border-inline-start-color: var(--line); }
+.how a { color: var(--coral-ink); }
+.terms-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; max-width: 46em; }
+.terms-list li { background: var(--surface); border-radius: 18px; padding: 16px 20px; }
+.terms-list b { font-weight: 800; }
+
 /* the application form */
 .biz-form-wrap { padding-top: 24px; display: grid; gap: 10px; }
 .biz-form-wrap h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; margin: 0; }

@@ -10,14 +10,19 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/landing.css" />
     <link rel="stylesheet" href="/biz.css" />
+    <link rel="stylesheet" href="/chrome.css" />
   </head>
   <body>
     <!-- The verification policy (owner 2026-11-12: the mark is free and only says the business exists and the applicant
          represents it; research/vendor-site.md §5.3 levels and checks). -->
     <a class="skip" href="#main">דילוג לתוכן</a>
-    <header class="wrap top plain-top">
-      <a class="mark" href="/"><img src="/icon.svg" alt="" width="40" height="40" />לחגוג <span class="biz-tag">לעסקים</span></a>
-    </header>
+    <!-- chrome:bar -->
+      <header class="sitebar biz-bar plain-top">
+        <a class="sb-mark" href="/"><img src="/icon.svg" alt="" width="40" height="40" />לחגוג <span class="biz-tag">לעסקים</span></a>
+        <nav class="sb-links" aria-label="ניווט"><a href="/#how">איך זה עובד</a><a href="/#terms">התנאים</a><a href="/#faq">שאלות</a><a href="/verification" aria-current="page">אימות עסקים</a><a class="sb-biz" href="https://lahgog.app/">האפליקציה</a></nav>
+        <a class="sb-cta" href="/apply">הצטרפות</a>
+        </header>
+      <!-- /chrome:bar -->
     <main class="wrap doc-biz" id="main">
       <h1>איך מאמתים עסק.</h1>
       <p class="note">עודכן לאחרונה: 16 בנובמבר 2026</p>
@@ -43,14 +48,15 @@
       <h2>ראיתם סימן שנראה שגוי?</h2>
       <p>כתבו ל-<a href="mailto:business@lahgog.app">business@lahgog.app</a> עם שם העסק ומה לא נראה נכון. אפשר גם לערער על החלטה שלנו באותה כתובת.</p>
     </main>
-    <footer class="wrap foot">
-      <nav aria-label="קישורים">
-        <a href="/">לחגוג לעסקים</a>
-        <a href="/apply">בקשה להצטרפות</a>
-        <a href="/privacy">פרטיות</a>
-        <a href="mailto:business@lahgog.app">business@lahgog.app</a>
-      </nav>
-      <p>לחגוג</p>
-    </footer>
+    <!-- chrome:foot -->
+      <footer class="sitefoot" aria-label="קישורים">
+      <div class="sf-cols">
+      <div><h2>לחגוג לעסקים</h2><ul><li><a href="/">דף הבית</a></li><li><a href="/apply">בקשה להצטרפות</a></li><li><a href="/verification" aria-current="page">אימות עסקים</a></li><li><a href="/#faq">שאלות נפוצות</a></li></ul></div>
+      <div><h2>מידע</h2><ul><li><a href="/privacy">פרטיות</a></li><li><a href="mailto:business@lahgog.app">business@lahgog.app</a></li></ul></div>
+      <div><h2>לחגוג</h2><ul><li><a href="https://lahgog.app/">האפליקציה</a></li><li><a href="https://lahgog.app/hebrew-birthday">מחשבון יום הולדת עברי</a></li><li><a href="https://lahgog.app/collect">איסוף ימי הולדת</a></li></ul></div>
+      </div>
+      <p class="sf-base">לחגוג</p>
+      </footer>
+      <!-- /chrome:foot -->
   </body>
 </html>

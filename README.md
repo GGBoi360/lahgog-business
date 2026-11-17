@@ -4,9 +4,15 @@ A static site for businesses, kept apart from the app's site (`../site/`, lahgog
 website session. Decisions and their sources: `docs/website/DECISIONS.md` ("Business list and labelling (R87)");
 research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows).
 
-- **Pages:** `/` (who it's for, the two first categories, what exists today vs. later, "fair to both sides"),
-  `/apply` (the application), `/verification` (what the free "עסק מאומת" mark checks and means), `/privacy` (this
-  site's own policy; the app's is lahgog.app/privacy), `404.html`.
+- **Pages:** `/` (round 2, 2026-11-17: hero "הלקוחות הבאים שלכם כבר מתכננים" with the real planner screenshot and
+  its "להזמין הפעלה" to-do marked; who it's for, every events field with entertainers and workshops opening first; how
+  the vendor list will work, with the one thing that exists today marked; how to join; what a business gets later;
+  the founding-partner terms; FAQ), `/apply` (the application, ten fields), `/verification` (what the free "עסק מאומת"
+  mark checks and means), `/privacy` (this site's own policy; the app's is lahgog.app/privacy), `404.html`.
+- **Top bar and footer** come from `../site/tools/chrome.mjs` (the same script as lahgog.app; `chrome.css` is a
+  copy of `../site/chrome.css`). Edit them there, run it, and run `--check` before publishing.
+- **The screenshot's highlight** (`.biz-shot .spot` in `biz.css`) is placed in pixels for a 280 px phone; replacing
+  `shots/plan-card.webp` means measuring the to-do's row again.
 - **Owner's decisions it follows (2026-11-12):** first categories kids' birthday entertainers and workshops; the mark is
   free and means only that the business exists and the applicant represents it; no payment system, so nothing here
   sells anything. Never: fake counters, logos of businesses that didn't agree, dates promised for "later" items.
