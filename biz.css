@@ -24,7 +24,9 @@
 .biz-bar .sb-cta:focus-visible { outline: 3px solid #fff8f2; outline-offset: 2px; }
 @media (max-width: 760px) { .biz-bar > .sb-links { display: none; } }
 .plain-top.sitebar .biz-tag { background: var(--lavender); color: var(--violet); }
-.biz-hero h1 { max-width: 13ch; }
+/* Two lines on a computer ("הלקוחות הבאים שלכם / כבר מתכננים."); a phone may wrap inside them. */
+.biz-hero h1 { max-width: none; }
+@media (min-width: 900px) { .biz-hero h1 .nowrap { display: block; white-space: nowrap; } }
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .ghost-link { color: #fff8f2; font-weight: 500; text-underline-offset: 4px; }
 .hero-terms { margin: 16px 0 0; font-size: 15px; color: rgba(255, 248, 242, 0.72); }
@@ -40,6 +42,13 @@
 .chips li.first { border-color: var(--coral); }
 .chips li.first::before, .chips-key .dot { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); margin-inline-end: 8px; vertical-align: middle; }
 .chips-key { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+/* The strengths: a light list, one line each (owner: the cards were heavy, nobody reads them). */
+.strengths { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 44em; font-size: 18px; }
+.strengths li { position: relative; padding-inline-start: 34px; }
+.strengths li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--violet); color: #fff; font-size: 14px; font-weight: 800; display: grid; place-items: center; margin-top: 3px; }
+.strengths b { font-weight: 800; }
+.strengths li.today::before { background: var(--teal); }
+.strengths li.today b { color: var(--teal-ink); }
 .value-grid { display: grid; gap: 14px; }
 @media (min-width: 760px) { .value-grid { grid-template-columns: 1fr 1fr; } }
 .value-grid article { background: var(--surface); border-radius: 22px; padding: 22px; }
