@@ -6,7 +6,7 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
 
 - **Pages:** `/` (round 2, 2026-11-17: hero "הלקוחות הבאים שלכם כבר מתכננים" with the real planner screenshot and
   its "להזמין הפעלה" to-do marked; who it's for, every events field with entertainers and workshops opening first; how
-  the vendor list will work, with the one thing that exists today marked; how to join; what a business gets later;
+  the vendor list will work, with the one thing that exists today marked; where a business will appear (the planner, the AI's suggestions, group chats; the real AI-planner screenshot); how to join; what a business gets later;
   the launch offer ("הצעת ההשקה"); FAQ), `/apply` (the application, ten fields), `/verification` (what the free "עסק מאומת"
   mark checks and means), `/privacy` (this site's own policy; the app's is lahgog.app/privacy), `404.html`.
 - **Top bar and footer** come from `../site/tools/chrome.mjs` (the same script as lahgog.app; `chrome.css` is a

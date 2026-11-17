@@ -32,8 +32,8 @@
 .hero-terms { margin: 16px 0 0; font-size: 15px; color: rgba(255, 248, 242, 0.72); }
 .biz-shot { margin: 0; position: relative; width: 280px; justify-self: center; }
 .biz-shot .shot { transform: rotate(-2deg); }
-/* The to-do "להזמין הפעלה או בעל מקצוע לילדים" in the screenshot: its row is at 43.5% of the 600×1122 image, which
-   is 264 px wide here (280 minus the 8 px frame), so its centre is 8 + 0.435 × 493.7 ≈ 223 px from the top. */
+/* The to-do "להזמין הפעלה או בעל מקצוע לילדים" in the screenshot: its row is at ~43% of the 600×1147 image, which
+   is 264 px wide here (280 minus the 8 px frame), placed by measuring the render (re-measure if the image changes). */
 .biz-shot .spot { position: absolute; inset-inline: -6px; top: 204px; height: 38px; border: 3px solid var(--saffron); border-radius: 12px; transform: rotate(-2deg); box-shadow: 0 0 12px rgba(245, 178, 27, 0.35); pointer-events: none; }
 .biz-shot figcaption { margin-top: 18px; font-size: 15px; color: rgba(255, 248, 242, 0.78); text-align: center; }
 .biz-shot figcaption b { display: block; color: #fff8f2; font-weight: 500; }
@@ -49,6 +49,12 @@
 .strengths b { font-weight: 800; }
 .strengths li.today::before { background: var(--teal); }
 .strengths li.today b { color: var(--teal-ink); }
+/* Where a business will appear: the list beside a real screenshot. */
+.where { display: grid; gap: 36px; align-items: center; }
+@media (min-width: 900px) { .where { grid-template-columns: 1fr 300px; } }
+.where-shot { margin: 0; width: 260px; justify-self: center; }
+.where-shot .shot { transform: rotate(2deg); }
+.where-shot figcaption { margin-top: 16px; font-size: 14px; color: var(--muted); text-align: center; }
 .value-grid { display: grid; gap: 14px; }
 @media (min-width: 760px) { .value-grid { grid-template-columns: 1fr 1fr; } }
 .value-grid article { background: var(--surface); border-radius: 22px; padding: 22px; }
