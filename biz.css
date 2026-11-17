@@ -42,7 +42,11 @@
 .doc-biz .note { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
 .mark-box { background: var(--lavender); border-radius: 20px; padding: 16px 20px; display: grid; gap: 8px; }
 .mark-box p { margin: 0; }
-.biz-form .go-btn { text-decoration: none; text-align: center; }
+.biz-form .go-btn, .biz-form .ghost-btn { text-decoration: none; text-align: center; }
+.biz-form .go-btn:disabled { opacity: 0.6; cursor: progress; }
+.biz-form:focus { outline: none; }
+/* The field only scripts fill (apply.js): off screen, out of the tab order and the accessibility tree. */
+.hp { position: absolute; inset-inline-start: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .fallback { margin-top: 6px; }
 .fallback summary { cursor: pointer; color: #c4381f; font-weight: 500; }
 .fallback[open] { display: grid; gap: 8px; }

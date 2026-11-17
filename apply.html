@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="/biz.css" />
   </head>
   <body>
-    <!-- The application (research/vendor-site.md §5.3, trimmed for stage A). No server: the form composes an email to
-         business@lahgog.app in the visitor's mail app, with a copy-and-send fallback. Nothing is stored by the site. -->
+    <!-- The application (research/vendor-site.md §5.3, trimmed for stage A). Sent to our server (migration 95,
+         submit_business_application); if it can't be reached, a ready email to business@lahgog.app instead. -->
     <a class="skip" href="#main">דילוג לתוכן</a>
     <div class="stage">
       <header class="wrap top">
@@ -82,16 +82,24 @@
             <p class="small-note">צריך אותו רק לסימן "עסק מאומת". <a href="/verification">מה בודקים</a></p>
           </fieldset>
 
-          <p class="notice">הפרטים יישלחו אלינו באימייל שנפתח אצלכם, ונשתמש בהם רק כדי לבדוק את הבקשה ולחזור אליכם. מסירתם רשות. בקשה שלא התקבלה נמחקת אחרי 12 חודשים, ואפשר לבקש למחוק אותה קודם. <a href="/privacy">מדיניות הפרטיות</a></p>
+          <p class="notice">הפרטים נשמרים אצלנו, ונשתמש בהם רק כדי לבדוק את הבקשה ולחזור אליכם. מסירתם רשות. בקשה שלא התקבלה נמחקת אחרי 12 חודשים, ואפשר לבקש למחוק אותה קודם. <a href="/privacy">מדיניות הפרטיות</a></p>
           <label class="check"><input id="agree" type="checkbox" /> מאשרים שתחזרו אלינו בנוגע לבקשה</label>
-          <button class="go-btn" type="submit">לשלוח את הבקשה</button>
+          <div class="hp" aria-hidden="true"><label for="website">אתר נוסף</label><input id="website" type="text" tabindex="-1" autocomplete="off" /></div>
+          <button class="go-btn" id="send" type="submit">לשלוח את הבקשה</button>
           <p class="calc-error" id="error" role="alert" hidden></p>
         </form>
 
-        <div class="calc-card biz-form" id="done" hidden>
-          <h2>עוד צעד אחד: לשלוח.</h2>
-          <p>בתוכנת הדואר שלכם נפתח אימייל מוכן אל <b>business@lahgog.app</b>, עם כל הפרטים. לחצו שם על "שליחה", ונחזור אליכם.</p>
-          <a class="go-btn" id="reopen" href="#">לפתוח שוב את האימייל</a>
+        <div class="calc-card biz-form" id="done" tabindex="-1" hidden>
+          <h2>הבקשה נשלחה.</h2>
+          <p>תודה. נחזור אליכם בטלפון או באימייל.</p>
+          <a class="ghost-btn" href="/">לעמוד הראשי</a>
+        </div>
+
+        <div class="calc-card biz-form" id="offline" tabindex="-1" hidden>
+          <h2>השרת לא זמין כרגע.</h2>
+          <p>אפשר לשלוח את אותה בקשה באימייל אל <b><bdi>business@lahgog.app</bdi></b>, או לנסות שוב מאוחר יותר.</p>
+          <a class="go-btn" id="mailto" href="#">לשלוח באימייל</a>
+          <button class="ghost-btn" id="retry" type="button">לנסות שוב</button>
           <details class="fallback">
             <summary>האימייל לא נפתח?</summary>
             <p>העתיקו את הנוסח ושלחו אותו מכל תיבת דואר אל business@lahgog.app.</p>

@@ -10,10 +10,22 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
 - **Owner's decisions it follows (2026-11-12):** first categories kids' birthday entertainers and workshops; the mark is
   free and means only that the business exists and the applicant represents it; no payment system, so nothing here
   sells anything. Never: fake counters, logos of businesses that didn't agree, dates promised for "later" items.
-- **The application has no server.** `apply.js` checks the fields and opens an email to `business@lahgog.app` with the
-  answers, and shows the same text to copy. So `business@lahgog.app` must forward (Porkbun) to the owner's mailbox,
-  and the privacy page names Porkbun and Google for that reason. If a server form ever replaces it, that's a new data
-  flow: update `privacy.html` first.
+- **The application goes to our server** (since migration 95, owner 2026-11-17): `apply.js` checks the fields and
+  calls `submit_business_application` with the app's public anon key. The rows are in `public.business_applications`
+  (closed to every client; the owner reads and updates `status`, `notes`, `left_at` in the Supabase dashboard). Caps
+  answer like a success (30 an hour site-wide, one a day per phone or email); a hidden field that only scripts fill
+  stops the page before sending. The owner gets at most one push an hour, a count only. If the server can't be
+  reached (or the migration isn't live yet), the page offers a ready email to `business@lahgog.app` with a copy
+  fallback, so that address must keep forwarding (Porkbun) to the owner's mailbox; the privacy page names Supabase,
+  Porkbun and Google for that reason. Retention (12 months, monthly purge) is in the migration and `privacy.html`.
+- **Handling an application (owner):** dashboard → Table editor → `business_applications`; set `status` as it moves
+  (`contacted`, `verifying`, `accepted`, `rejected`, `withdrawn`). An accepted business that leaves the list gets
+  `left_at`, which starts its 12 months. A request to delete is a plain row delete.
+- **Showing applications anywhere (security review, bdays-bd 2026-11-17):** names, the description and the link are
+  stored as the applicant typed them. Any page that ever shows them (a dashboard, the future vendor list) inserts them
+  as text (`textContent`, never `innerHTML`), and renders the link only as an `http(s)` href (add `https://` to a bare
+  domain). The server already refuses links with another scheme (`javascript:`, `data:`), and the per-contact daily
+  cap compares phones by digits with +972 as 0.
 - **Shared look:** `landing.css`, `fonts/` and the icons are copies from `../site/`; `biz.css` adds this site's parts.
   After a change to `../site/landing.css` that matters here, copy it again.
 - **Publishing:** this folder is the source of truth; the public repo **GGBoi360/lahgog-business** (GitHub Pages,
