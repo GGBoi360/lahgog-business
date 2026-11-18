@@ -8,7 +8,7 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
   its "להזמין הפעלה" to-do marked; who it's for, every events field with entertainers and workshops opening first; how
   the vendor list will work, with the one thing that exists today marked; where a business will appear (the planner, the AI's suggestions, group chats; the real AI-planner screenshot); how to join; what a business gets later;
   the launch offer ("הצעת ההשקה"); FAQ), `/apply` (the application, ten fields), `/verification` (what the free "עסק מאומת"
-  mark checks and means), `/privacy` (this site's own policy; the app's is lahgog.app/privacy), `404.html`.
+  mark checks and means), `/terms` (the terms for businesses, with the launch offer; 2026-11-18), `/privacy` (this site's own policy; the app's is lahgog.app/privacy), `404.html`. The link preview is `og.png`, rendered from `.preview/og.html` (git-ignored, not published: serve this folder and screenshot it at 1200×630). Finding the first businesses: `docs/website/vendor-outreach.md`.
 - **Top bar and footer** come from `../site/tools/chrome.mjs` (the same script as lahgog.app; `chrome.css` is a
   copy of `../site/chrome.css`). Edit them there, run it, and run `--check` before publishing.
 - **The screenshot's highlight** (`.biz-shot .spot` in `biz.css`) is placed in pixels for a 280 px phone; replacing
@@ -40,7 +40,7 @@ research: `docs/website/research/vendor-site.md` (§5.3 is the plan this follows
   After a change to `../site/landing.css` that matters here, copy it again.
 - **Publishing:** this folder is the source of truth; the public repo **GGBoi360/lahgog-business** (GitHub Pages,
   branch `main`, root, custom domain `lahgog.com` via `CNAME`) only mirrors it, like `site/` and GGBoi360/lahgog-site.
-  To publish: copy this folder's files over a clone of that repo, commit, push.
+  To publish: copy this folder's files over a clone of that repo (not `.preview/` or `.gitignore`), commit, push.
 - **DNS (Porkbun, owner):** the apex `lahgog.com` A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
   `185.199.111.153` and AAAA `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`,
   `2606:50c0:8003::153`; `www` CNAME `ggboi360.github.io`. Then "Enforce HTTPS" in the repo's Pages settings.
